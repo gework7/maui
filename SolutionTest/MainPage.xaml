@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:solutionTest="clr-namespace:SolutionTest"
+             x:Class="SolutionTest.MainPage"
+             Title="Accessibility Header Test">
+
+    <CollectionView ItemsSource="{Binding Items}">
+        <CollectionView.Header>
+            <VerticalStackLayout Padding="16"
+                                 BackgroundColor="LightGray"
+                                 AutomationProperties.IsInAccessibleTree="False"> <!-- 🧨 belangrijk -->
+
+                <Label Text="My Travel Information"
+                       FontSize="20"
+                       SemanticProperties.HeadingLevel="Level1"
+                       AutomationProperties.Name="My Travel Information"
+                       AutomationProperties.IsInAccessibleTree="True" />
+
+                <Button Text="Add Trip"
+                        AutomationProperties.Name="Add Trip Button"
+                        AutomationProperties.IsInAccessibleTree="True" />
+
+                <Label Text="Below is a list of your planned trips"
+                       AutomationProperties.Name="Introductory Text"
+                       AutomationProperties.IsInAccessibleTree="True" />
+
+            </VerticalStackLayout>
+
+        </CollectionView.Header>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Border Padding="10" Margin="10">
+                    <Label Text="{Binding Name}" />
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+    </CollectionView>
+</ContentPage>

@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - /Users/gework/Desktop/SolutionTest/SolutionTest/bin/Debug/net9.0-ios/iossimulator-arm64/SolutionTest.app/libmono-component-diagnostics_tracing.dylib

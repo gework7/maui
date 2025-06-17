@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/gework/Desktop/SolutionTest/SolutionTest/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/gework/Desktop/SolutionTest/SolutionTest/bin/Debug/net9.0-maccatalyst/maccatalyst-arm64/SolutionTest.app
